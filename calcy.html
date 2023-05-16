@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .btn {
+        height: 50px;
+        width: 100px;
+        border: 1px solid #ccc;
+        padding: 5px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="text1" placeholder="NumberA" /><br /><br />
+    <input type="text" id="text2" placeholder="Numberb" /><br /><br />
+    <div class="btn">
+      <button onclick="calculate('+')">+</button>
+      <button onclick="calculate('-')">-</button>
+      <button onclick="calculate('*')">*</button>
+      <button onclick="calculate('/')">/</button>
+    </div>
+    <br />
+    <input type="text" id="text3" placeholder="Result" /><br /><br />
+  </body>
+  <script>
+    function calculate(operator) {
+      var a = document.getElementById("text1").value;
+      var b = document.getElementById("text2").value;
+      var result = eval(a + operator + b);
+      document.getElementById("text3").value = result;
+    }
+  </script>
+</html>
